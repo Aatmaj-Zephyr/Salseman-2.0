@@ -1,4 +1,11 @@
+function clear(){
+    document.getElementById('xpos').value="";
+    document.getElementById('ypos').value="";
+    document.getElementById('citytext').value="";
+    document.getElementById('nbr').value="";
+}
 function addcity(){
+    clear();
     document.getElementById('form').style.display="inline";
     document.getElementById('addcity').style.display="none";
 }
@@ -17,10 +24,27 @@ function submit(){
         +document.getElementById('xpos').value+":"
         +document.getElementById('ypos').value);
         document.getElementById('form').style.display="none";
+       var tempstring;
+       tempstring="";
+       
+       for (var option of document.getElementById('nbr').options)
+    {
+        if (option.selected) {
+            tempstring=tempstring+(option.value)+',';
+        }
+    } 
+        addneighbour(document.getElementById('citytext').value+":"+tempstring.slice(0,-1));//Remove the last comma
+        
     }
+    document.getElementById('addcity').style.display="inline";
+    
+}
+function addneighbour(a){
+    //Put neighbors in database if not present already
+  //  window.alert(a);
 }
 function Add(a){
-    //document.getElementById('submit').innerHTML=a
+    //window.alert(a)
     /* Put in Data base if not present already
     ..
     ...
