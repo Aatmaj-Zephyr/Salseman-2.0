@@ -21,9 +21,23 @@
         <br>
         <label class="yposlbl" id="yposlbl"></label>
         <input class="ypos" id="ypos" type="number" step="0.1" required>
+        <hr>
+        
+        <label class="neighbours" id="nbrlbl"></label>
         <br>
-        <button id="submit" onclick="submit()"></button>
+        <select name="neighbours" id="nbr" multiple size="5">
+  <option value="pune">pune</option>
+  <option value="mumbai">mumbai</option>
+  <option value="dombivli">dombivli</option>
+  <option value="chennai">chennai</option>
+  <option value="kalyan">kalyan</option>
+  <option value="matunga">matunga</option>
+  <option value="delhi">delhi</option>
+</select>
+<hr>
+<button id="submit" onclick="submit()"></button>
         </div>
+
         
     <script src="main.js"></script>
     <script src="initialize.js"></script>
