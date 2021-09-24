@@ -14,14 +14,15 @@
         <div id=form class=form>
         <br>
         <label class="cityname" id="cityname"></label>
-        <input class="citytext" id="citytext" type="text">
+        <input class="citytext" id="citytext" type="text" required>
         <br>
         <label class="xposlbl" id="xposlbl"></label>
-        <input class="xpos" id="xpos" type="text">
+        <input class="xpos" id="xpos" type="number" step="0.1" required>
         <br>
         <label class="yposlbl" id="yposlbl"></label>
-        <input class="ypos" id="ypos" type="text">
+        <input class="ypos" id="ypos" type="number" step="0.1" required>
         <br>
+        <button id="submit" onclick="submit()"></button>
         </div>
         
     <script src="main.js"></script>
