@@ -48,7 +48,7 @@ public class Main
 	catch (ArrayIndexOutOfBoundsException a)
 	//city name is invalid, or does not exist in the input citylist.
 	{
-	  System.out.println ("Error!"); //name mismatch.
+	  System.out.println ("Error! name mistmatch. Invalid city name. The city doesn't exist."); //name mismatch.
 	}
       }
     
