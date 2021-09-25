@@ -1,10 +1,22 @@
 var city;
 city=["pune","chennai","delhi","nagpur","dombivli","dadar","vashi","kalyan","bhivandi"];
+function setroute(){
+    setcities();
+    document.getElementById("ctyform").style.display="inline";
+    document.getElementById('setroute').style.display="none";
+}
 function setcities(){
     document.getElementById("nbr").innerHTML="";
-    for (var citycounter of city){
-      document.getElementById("nbr").innerHTML+='<option value="'+citycounter+'">'+citycounter+"</option>" ;
+    for (var nbrcounter of city){
+      document.getElementById("nbr").innerHTML+='<option value="'+nbrcounter+'">'+nbrcounter+"</option>" ;
     }
+   document.getElementById("cty").innerHTML="";
+    for (var citycounter of city){
+      document.getElementById("cty").innerHTML+='<option value="'+citycounter+'">'+citycounter+"</option>" ;
+    }
+}
+function submitcty(){
+    //Get the shortest path
 }
 function clear(){
     document.getElementById('xpos').value="";
@@ -29,7 +41,7 @@ function submit(){
         window.alert("Error: Please fill out the y coordinate of the city");
     }
     else{
-        Add(document.getElementById('citytext').value.lower()+":"
+        Add(document.getElementById('citytext').value.toLowerCase()+":"
         +document.getElementById('xpos').value+":"
         +document.getElementById('ypos').value);
         document.getElementById('form').style.display="none";
@@ -42,11 +54,12 @@ function submit(){
             tempstring=tempstring+(option.value)+',';
         }
     } 
-        addneighbour(document.getElementById('citytext').value.lower()+":"+tempstring.slice(0,-1));//Remove the last comma
-        addtocitylist(document.getElementById('citytext').value.lower())
-        
+        addneighbour(document.getElementById('citytext').value.toLowerCase()+":"+tempstring.slice(0,-1));//Remove the last comma
+        addtocitylist(document.getElementById('citytext').value.toLowerCase())
+         document.getElementById('addcity').style.display="inline";
+         setcities()
     }
-    document.getElementById('addcity').style.display="inline";
+   
     
 }
 function addneighbour(a){
