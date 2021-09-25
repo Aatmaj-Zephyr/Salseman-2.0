@@ -2,13 +2,13 @@ import java.util.*;
 public class Main
 {
 
-  public static void main (String[]args)
+  public static void main (String[] args)
   {
 
     Getinput in = new Getinput (); 
     //Make a new Getinput object. This will be used to run the set() method.
     //We can use it for running the program on different different cities and different different paths.
-    
+ 
     
     citylist input = in.set ("Cities.txt", "Neighbours.txt");
     //This will make instances of the city objects with positions(coordinates) as given in the "coordinates.txt" file,
@@ -28,12 +28,9 @@ public class Main
     while (true)
     //Repeat until the user enters a valid city to start and to reach.
       {
-          
-	System.out.println ("Please enter the city at which the salseman starts.");//prompt the user to enter the name of a city from which the salseman starts.
-	String start = myObj.nextLine (); //accept the name of the city and put it in a string named start
+         String start = ; //accept the name of the city and put it in a string named start
 	
-	System.out.println ("Please enter the city at which the salseman has to reach.");//prompt the user to enter the name of a city at which the salseman has to reach.
-	String end = myObj.nextLine ();//accept the name of the city and put it in a string named end
+	 String end = ;//accept the name of the city and put it in a string named end
 	
 	  try //try-catch to check if the entered city is in the list "input" or not.
 	{
@@ -51,7 +48,7 @@ public class Main
 	catch (ArrayIndexOutOfBoundsException a)
 	//city name is invalid, or does not exist in the input citylist.
 	{
-	  System.out.println ("Invalid enteries"); //name mismatch.
+	  System.out.println ("Error!"); //name mismatch.
 	}
       }
     
