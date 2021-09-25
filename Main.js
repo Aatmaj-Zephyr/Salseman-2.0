@@ -55,9 +55,9 @@ function submit(){
         }
     } 
         addneighbour(document.getElementById('citytext').value.toLowerCase()+":"+tempstring.slice(0,-1));//Remove the last comma
-        addtocitylist(document.getElementById('citytext').value.toLowerCase())
+        addtocitylist(document.getElementById('citytext').value.toLowerCase());
          document.getElementById('addcity').style.display="inline";
-         setcities()
+         setcities();
     }
    
     
