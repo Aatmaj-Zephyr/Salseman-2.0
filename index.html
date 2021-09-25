@@ -8,7 +8,21 @@
 .form{
     display:none;
 }
+.ctyform{
+    display:none;
+}
         </style>
+        <button id="setroute" onclick="setroute()"></button>
+        <br>
+        <div id=ctyform class=ctyform>
+        <label id="ctylbl"></label>
+        <br>
+        <select name="cities" id="cty" multiple size="5"></select>
+        <br>
+        <button id="submitcty" onclick="submitcty()"></button>
+                </div>
+
+        <hr>
         <button id="addcity" onclick="addcity()"></button>
         
         <div id=form class=form>
@@ -25,8 +39,7 @@
         
         <label class="neighbourslbl" id="nbrlbl"></label>
         <br>
-        <select name="neighbours" id="nbr" multiple size="5">
-</select>
+        <select name="neighbours" id="nbr" multiple size="5"></select>
 <hr>
 <button id="submit" onclick="submit()"></button>
         </div>
