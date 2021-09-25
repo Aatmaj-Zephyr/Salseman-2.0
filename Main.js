@@ -10,12 +10,19 @@ function setcities(){
     for (var nbrcounter of city){
       document.getElementById("nbr").innerHTML+='<option value="'+nbrcounter+'">'+nbrcounter+"</option>" ;
     }
-   document.getElementById("cty").innerHTML="";
-    for (var citycounter of city){
-      document.getElementById("cty").innerHTML+='<option value="'+citycounter+'">'+citycounter+"</option>" ;
+   document.getElementById("ctystart").innerHTML="";
+    for (var citystartcounter of city){
+      document.getElementById("ctystart").innerHTML+='<option value="'+citystartcounter+'">'+citystartcounter+"</option>" ;
+    }
+       document.getElementById("ctyend").innerHTML="";
+    for (var cityendcounter of city){
+      document.getElementById("ctyend").innerHTML+='<option value="'+cityendcounter+'">'+cityendcounter+"</option>" ;
     }
 }
 function submitcty(){
+    document.getElementById("ctyform").style.display="none";
+    document.getElementById('setroute').style.display="inline";
+    
     //Get the shortest path
 }
 function clear(){
