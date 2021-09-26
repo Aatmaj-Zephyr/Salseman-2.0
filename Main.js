@@ -48,6 +48,7 @@ function submit(){
         window.alert("Error: Please fill out the y coordinate of the city");
     }
     else{
+        if(!city.includes(document.getElementById('citytext').value.toLowerCase())){
         Add(document.getElementById('citytext').value.toLowerCase()+":"
         +document.getElementById('xpos').value+":"
         +document.getElementById('ypos').value);
@@ -66,7 +67,10 @@ function submit(){
          document.getElementById('addcity').style.display="inline";
          setcities();
     }
-   
+    else{
+        window.alert("Error! City already present");
+    }
+    }
     
 }
 function addneighbour(a){
