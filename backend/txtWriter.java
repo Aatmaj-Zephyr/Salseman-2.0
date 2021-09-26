@@ -4,11 +4,12 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 public class txtWriter {
   //This class is used to write on the files.
-  public void writeneighbours(String neighbours)
+  public void writeneighbours(String neighbours) //write neighbours
   throws IOException {
     BufferedWriter output;
-    output = new BufferedWriter(new FileWriter("Neighbours.txt", true)); //clears file every time
+    output = new BufferedWriter(new FileWriter("Neighbours.txt", true)); //append to nextline
     File file = new File("Neighbours.txt");
+    //If file is empty, don't add the newline, else add newline
     if (file.length() == 0)
       output.append(neighbours);
     else {
@@ -17,7 +18,7 @@ public class txtWriter {
     }
     output.close();
   }
-  public void Writecity(String citydata)
+  public void Writecity(String citydata) //write cities
   throws IOException {
     BufferedWriter output;
     output = new BufferedWriter(new FileWriter("cities.txt", true)); //clears file every time
