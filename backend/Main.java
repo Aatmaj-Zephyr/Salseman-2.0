@@ -15,7 +15,7 @@ public class Main
     //and set the available paths from the "paths.txt" file. Then this cities instances are returned in a citylist.
     
     System.out.println ("Here is the list of cities."); 
-    input.print (",");
+    System.out.println(input.send());
     //Print the values in the citylist for the user to choose from.
     
     System.out.println ();//blank line
