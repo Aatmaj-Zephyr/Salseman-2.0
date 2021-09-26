@@ -112,7 +112,16 @@ public class citylist
       }
     System.out.print (listofcities.get (listofcities.size () - 1).name);
   }
-  
+  public String send(){
+      String sendstring= new String();
+       for (int i = 0; i < (listofcities.size () - 1); i++)
+      {
+	sendstring= sendstring + listofcities.get (i).name;
+
+      }
+    sendstring= sendstring + (listofcities.get (listofcities.size () - 1).name);
+    return sendstring;
+  }
   /*
   posn-The method to find the position of the city in the list.
   Can add parameters of city object, city name or coordinates.
