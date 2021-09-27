@@ -1,11 +1,18 @@
+//updatecitylist()
 var city;
 city=["pune","chennai","delhi","nagpur","dombivli","dadar","vashi","kalyan","bhivandi"];
+function showroute(){
+    //Get route from backend.
+    window.alert("todo");//display the route to be taken
+}
 function setroute(){
     setcities();
     document.getElementById("ctyform").style.display="inline";
     document.getElementById('setroute').style.display="none";
+    showroute();
 }
 function setcities(){
+    //Set the dropdown boxes
     document.getElementById("nbr").innerHTML="";
     for (var nbrcounter of city){
       document.getElementById("nbr").innerHTML+='<option value="'+nbrcounter+'">'+nbrcounter+"</option>" ;
@@ -48,32 +55,41 @@ function submit(){
         window.alert("Error: Please fill out the y coordinate of the city");
     }
     else{
+        if(!city.includes(document.getElementById('citytext').value.toLowerCase())){
         Add(document.getElementById('citytext').value.toLowerCase()+":"
         +document.getElementById('xpos').value+":"
-        +document.getElementById('ypos').value);
-        document.getElementById('form').style.display="none";
+        +document.getElementById('ypos').value); //send city and coordinates.
+        
+        document.getElementById('form').style.display="none"; //hide form
+        
        var tempstring;
        tempstring="";
        
        for (var option of document.getElementById('nbr').options)
     {
         if (option.selected) {
-            tempstring=tempstring+(option.value)+',';
+            tempstring=tempstring+(option.value)+','; //Put the neighbours
         }
     } 
-        addneighbour(document.getElementById('citytext').value.toLowerCase()+":"+tempstring.slice(0,-1));//Remove the last comma
-        addtocitylist(document.getElementById('citytext').value.toLowerCase());
+        addneighbour(document.getElementById('citytext').value.toLowerCase()+
+                          ":"+tempstring.slice(0,-1));//Remove the last comma
+                          
+        updatecitylist(document.getElementById('citytext').value.toLowerCase());
          document.getElementById('addcity').style.display="inline";
          setcities();
     }
-   
+    else{
+        window.alert("Error! City already present");
+    }
+    }
     
 }
 function addneighbour(a){
     //Put neighbors in database if not present already
   //  window.alert(a);
 }
-function addtocitylist(a){
+function updatecitylist(a){
+    //Update citylist
     city.push(a);
     //Put the city name into the list
 }
