@@ -1,56 +1,49 @@
 <html>
-    <title>
-        Travelling salseman
-    </title>
-    <body >
-        <style>
-            
-.form{
-    display:none;
-}
-.ctyform{
-    display:none;
-}
-        </style>
-        <button id="setroute" onclick="setroute()"></button>
-        <br>
-        <div id=ctyform class=ctyform>
-        <label id="ctylblstart"></label>
-        <br>
-        <select name="cities" id="ctystart" ></select>
-        <br>
-        <label id="ctylblend"></label>
-        <br>
-        <select name="cities" id="ctyend" ></select>
-        <br>
-        <button id="submitcty" onclick="submitcty()"></button>
-                </div>
-
-        <hr>
-        <button id="addcity" onclick="addcity()"></button>
-        
-        <div id=form class=form>
-        <br>
-        <label class="cityname" id="cityname"></label>
-        <input class="citytext" id="citytext" type="text" required>
-        <br>
-        <label class="xposlbl" id="xposlbl"></label>
-        <input class="xpos" id="xpos" type="number" step="0.1" required>
-        <br>
-        <label class="yposlbl" id="yposlbl"></label>
-        <input class="ypos" id="ypos" type="number" step="0.1" required>
-        <hr>
-        
-        <label class="neighbourslbl" id="nbrlbl"></label>
-        <br>
-        <select name="neighbours" id="nbr" multiple size="5"></select>
-<hr>
-<button id="submit" onclick="submit()"></button>
-        </div>
-
-        
-    <script src="main.js"></script>
-    <script src="initialize.js"></script>
-    </body>
-   
+   <title>
+      Travelling salseman
+   </title>
+   <body >
+      <style>
+         .form{
+         display:none;
+         }
+         .ctyform{
+         display:none;
+         }
+      </style>
+      <button id="setroute" onclick="setroute()"></button>
+      <br>
+      <div id=ctyform class=ctyform>
+         <label id="ctylblstart"></label>
+         <br>
+         <select name="cities" id="ctystart" ></select>
+         <br>
+         <label id="ctylblend"></label>
+         <br>
+         <select name="cities" id="ctyend" ></select>
+         <br>
+         <button id="submitcty" onclick="submitcty()"></button>
+      </div>
+      <hr>
+      <button id="addcity" onclick="addcity()"></button>
+      <div id=form class=form>
+         <br>
+         <label class="cityname" id="cityname"></label>
+         <input class="citytext" id="citytext" type="text" required>
+         <br>
+         <label class="xposlbl" id="xposlbl"></label>
+         <input class="xpos" id="xpos" type="number" step="0.1" required>
+         <br>
+         <label class="yposlbl" id="yposlbl"></label>
+         <input class="ypos" id="ypos" type="number" step="0.1" required>
+         <hr>
+         <label class="neighbourslbl" id="nbrlbl"></label>
+         <br>
+         <select name="neighbours" id="nbr" multiple size="5"></select>
+         <hr>
+         <button id="submit" onclick="submit()"></button>
+      </div>
+      <script src="main.js"></script>
+      <script src="initialize.js"></script>
+   </body>
 </html>
